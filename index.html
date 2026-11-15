@@ -37,6 +37,8 @@
   <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8V5.5c0-1.1.9-2 2-2H8"/><path d="M16 3.5h2.5c1.1 0 2 .9 2 2V8"/><path d="M20.5 16v2.5c0 1.1-.9 2-2 2H16"/><path d="M8 20.5H5.5c-1.1 0-2-.9-2-2V16"/><path d="M3.5 12h17"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 5 6v6c0 4.2 2.9 7.5 7 8.8 4.1-1.3 7-4.6 7-8.8V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
   <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="8" cy="8" r="4.2"/><path d="m11 11 8.5 8.5"/><path d="m16 16 2-2"/></symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/><path d="M18.5 15.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z"/></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M3.8 17.2l4.9-4.4 3.4 3 3-2.6 4.9 4.4"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.3 3.7 5.3 3.7 8.5s-1.3 6.2-3.7 8.5c-2.4-2.3-3.7-5.3-3.7-8.5S9.6 5.8 12 3.5z"/></symbol>
 </svg>
 
@@ -51,6 +53,7 @@
     <nav>
       <a href="#why">为什么</a>
       <a href="#features">能做什么</a>
+      <a href="#ai">AI 接入</a>
       <a href="#shots">界面</a>
       <a href="#cost">费用</a>
       <a href="#start">开始使用</a>
@@ -167,7 +170,12 @@
       <div class="card">
         <span class="ico"><svg><use href="#i-play"/></svg></span>
         <h3>预览</h3>
-        <p>图片可缩放，视频边下边播，PDF 与文本直接打开，不留下传输记录。</p>
+        <p>图片可缩放，视频与音频在页内播放，PDF 与文本一行「打开预览」，都不留下传输记录。</p>
+      </div>
+      <div class="card">
+        <span class="ico"><svg><use href="#i-photo"/></svg></span>
+        <h3>实况照片</h3>
+        <p>按 Apple 的包结构原样往返：传上去、再下载回相册，还是那张会动的实况照片。</p>
       </div>
       <div class="card">
         <span class="ico"><svg><use href="#i-trash"/></svg></span>
@@ -185,6 +193,48 @@
         <p>整体或单个存储用面容 / 指纹解锁；锁着时传输照常继续，关闭锁一定先要求一次设备验证。</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="ai" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>AI 接入 <span class="badge">1.5 新增</span></h2>
+      <p>把你已经在用的 AI 客户端接进来，让它替你整理云盘。孤云本身没有 AI 模型，也不用「Apple 智能」——它只是把门打开。</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <span class="ico"><svg><use href="#i-ai"/></svg></span>
+        <h3>它能替你做什么</h3>
+        <p>列目录、搜索、读文件、下载、上传、重命名、复制、移动、移到回收站。也可以先让它给一份「按年月归档」的计划，你看过再执行。</p>
+      </div>
+      <div class="card">
+        <span class="ico"><svg><use href="#i-devices"/></svg></span>
+        <h3>谁在调用</h3>
+        <p>Claude Desktop、Claude Code、Cursor 等支持 MCP 的客户端。在客户端里加上孤云给的说明就能用；应用内可以直接翻看 AI 收到的那份文档。</p>
+      </div>
+      <div class="card">
+        <span class="ico"><svg><use href="#i-lock"/></svg></span>
+        <h3>默认是关的</h3>
+        <p>打开后只监听本机回环地址，并且需要令牌；换网络、换客户端，门也不会自己开。</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="ico"><svg width="22" height="22"><use href="#i-shield"/></svg></span>
+      <div>
+        <h3>七组权限，默认全关</h3>
+        <p>每个存储还能再收窄，新加的存储会先问你一次。「文件处理位置」有三档：默认「仅元信息」——读内容、下载、校验和都拒绝；「只在本机」多允许下载，而下载也算内容访问；只有「允许送到 AI 服务商」才允许读内容。</p>
+      </div>
+    </div>
+
+    <ul class="privacy-list" style="margin-top:26px">
+      <li><svg><use href="#i-key"/></svg><span><b>密钥永不经过 AI。</b>AI 拿到的是应用给的权限，不是你的访问密钥。</span></li>
+      <li><svg><use href="#i-trash"/></svg><span><b>危险动作每次都要确认。</b>彻底删除、解冻、移除存储，都要在应用里点一次。</span></li>
+      <li><svg><use href="#i-clock"/></svg><span><b>每一步都留痕。</b>完整的操作日志，可以按类型筛选、导出 CSV、一键清理。</span></li>
+      <li><svg><use href="#i-scan"/></svg><span><b>状态一眼看见。</b>页面顶上的状态灯：灰是关着、橙是等待、绿是已接入、蓝是正在操作。</span></li>
+    </ul>
   </div>
 </section>
 
@@ -332,6 +382,7 @@
       <li><svg><use href="#i-key"/></svg><span><b>密钥只在本机。</b>访问密钥存在这台设备的钥匙串里，不上传、不随配置导出，也不经 iCloud 同步。</span></li>
       <li><svg><use href="#i-scan"/></svg><span><b>交接码里是明文密钥。</b>只有你主动把存储交给另一台设备时，密钥才会离开本机——把它当密码，只给自己的设备扫。</span></li>
       <li><svg><use href="#i-globe"/></svg><span><b>不采集使用数据。</b>没有第三方 SDK，没有分析，没有广告，也没有「匿名统计」。</span></li>
+      <li><svg><use href="#i-ai"/></svg><span><b>AI 接入也在本机。</b>只监听回环地址、要令牌；密钥不经过 AI，每次调用都记在本机审计里。</span></li>
       <li><svg><use href="#i-lock"/></svg><span><b>面容 / 指纹由系统处理。</b>这些数据不会离开你的设备，应用只拿到「通过」或「不通过」。</span></li>
       <li><svg><use href="#i-shield"/></svg><span><b>锁是界面门，不是加密。</b>它挡的是别人拿起你这台已解锁的设备；文件本身仍按你桶的权限存放。</span></li>
     </ul>
@@ -372,6 +423,22 @@
       <summary>我的文件会经过你们的服务器吗？</summary>
       <div class="body">
         <p>不会。没有账号体系，也没有我们的服务器：应用只与你填写的存储地址通信，文件从这台设备直达你自己的桶。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>AI 接入是默认开着的吗？</summary>
+      <div class="body">
+        <p>不是，默认关闭。打开后，应用只监听本机回环地址，并且需要令牌；七组权限默认全关，每个存储还能再收窄，新加的存储会先问你一次。</p>
+        <p>它不会自己去找 AI：你要在 Claude Desktop、Claude Code、Cursor 这类客户端里，把孤云给的说明加进去，才算接上。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>AI 会读到我的文件内容吗？</summary>
+      <div class="body">
+        <p>取决于「文件处理位置」这一档。默认是「仅元信息」：读内容、下载、校验和都拒绝，AI 只能看到目录与文件名这类信息。</p>
+        <p>选「只在本机」会多允许下载——而下载也算一次内容访问；只有选「允许送到 AI 服务商」，文件内容才会离开这台设备。密钥任何时候都不经过 AI。</p>
       </div>
     </details>
 

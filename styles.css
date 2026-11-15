@@ -289,6 +289,16 @@ h3 { font-size: 18px; margin: 0 0 8px; letter-spacing: -0.1px; }
   font-size: 13px; color: var(--muted); margin-top: 14px;
 }
 
+/* ---------- badge ---------- */
+
+.badge {
+  display: inline-block; vertical-align: 0.35em;
+  margin-left: 8px; padding: 3px 10px;
+  font-size: 12px; font-weight: 600; letter-spacing: .4px;
+  color: var(--teal); background: var(--teal-soft);
+  border-radius: 999px; white-space: nowrap;
+}
+
 /* ---------- steps ---------- */
 
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: step; }
